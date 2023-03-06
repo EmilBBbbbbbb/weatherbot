@@ -14,7 +14,13 @@ def get_wether(city, open_wether_token):
         city=data["name"]
         temp_now=data["main"]["temp"]
         wind = data["wind"]["speed"]
-        
+        pressure=data["main"]["pressure"]
+
+
+        print(f"Погода в городе {city} на сегодня:\n"
+              f"Температура: {temp_now}°С\n"
+              f"Скорость ветра: {wind}м/с\n"
+              f"Давление: {pressure}мм р.с\n")
     except Exception as ex:
         print(ex)
         print("Проверьте название города")
