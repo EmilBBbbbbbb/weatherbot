@@ -8,10 +8,13 @@ def get_wether(city, open_wether_token):
             f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={open_wether_token}&units=metric"
         )
         data= r.json()
-        pprint(data)
+
+        pprint(data) #all wether
 
         city=data["name"]
         temp_now=data["main"]["temp"]
+        wind = data["wind"]["speed"]
+        
     except Exception as ex:
         print(ex)
         print("Проверьте название города")
