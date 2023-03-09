@@ -33,7 +33,6 @@ def get_wether(message):
               f"Скорость ветра: {wind}м/с\n"
               f"Давление: {pressure}мм р.с\n")
     except Exception as ex:
-        bot.send_message(message.chat.id,ex)
         bot.send_message(message.chat.id,"Проверьте название города")
 
 bot.polling(none_stop=True)
