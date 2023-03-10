@@ -22,7 +22,8 @@ def get_wether(city, open_wether_token):
 
         wether_day(data, 0)
         #pprint(data) #all wether
-        #pprint(data["list"][0])
+        pprint(data["list"][0])
+        print(data["list"][0]['weather'][0]["main"])
         #pprint(data["list"][8]["dt_txt"])
 
     except Exception as ex:
